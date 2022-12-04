@@ -1,0 +1,493 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+body,
+html {
+  width: 100%;
+}
+
+body {
+  color: white !important;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.row,
+.col,
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  margin-top: 8vh;
+}
+
+nav {
+  height: 8vh;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.collapse ul a {
+  margin: 0 25px;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  transition: 1s;
+  width: 60px;
+}
+
+nav .titulo {
+  margin: 0;
+  margin-left: 5px;
+  border-bottom: 2px solid transparent;
+  transition: 0.6s;
+}
+
+nav .logo:hover img {
+  transform: rotate(20deg);
+}
+
+nav .logo:hover .titulo {
+  border-bottom: 2px solid #01cad4;
+  color: #01cad4;
+}
+
+.nav-ul-container {
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.nav-a {
+  width: 100%;
+  transition: 1s;
+  font-size: 1.2rem;
+  border-bottom: 2px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 22px;
+}
+
+.nav-a:hover {
+  border-bottom: 2px solid #0683dc;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.actived {
+  color: white;
+  border-bottom: 2px solid #0683dc61;
+}
+
+/* Section - Title Row */
+
+section {
+  height: 100vh;
+  width: 100%;
+}
+
+.grid-title {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Section - Grid Area */
+
+.grid-area {
+  width: 100%;
+  height: 550vh;
+  display: grid;
+  grid-template-areas:
+    "title image-2 image-2 image-2"
+    "image-3 image-4 image-5 image-5"
+    "image-3 image-4 image-5 image-5"
+    "image-3 image-6 image-6 image-7"
+    "image-8 image-6 image-6 image-7"
+    "image-8 image-9 image-10 image-11"
+    "image-12 image-9 image-10 image-11"
+    "image-13 image-14 image-10 image-11"
+    "image-13 image-14 image-15 image-11"
+    "image-16 image-16 image-17 image-17"
+    "image-16 image-16 image-17 image-17"
+    "image-18 image-18 image-18 image-18"
+    "image-19 image-19 image-19 image-20"
+    "image-21 image-21 image-22 image-20"
+    "image-23 image-24 image-22 image-25"
+    "image-27 image-26 image-26 image-28"
+    "image-29 image-30 image-31 image-32"
+    "image-33 image-34 image-35 image-36";
+  gap: 10px;
+  grid-template-columns: 30vw auto;
+}
+
+.title {
+  grid-area: title;
+  background: #343a40;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  border-bottom-right-radius: 30px;
+}
+
+.grid-area a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.grid-area a .fundo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s ease-in-out;
+  transform: scale(1.2);
+  filter: brightness(50%);
+}
+
+a:hover .fundo {
+  transform: scale(1);
+  filter: brightness(100%);
+}
+
+.grid-area a .image-title {
+  position: absolute;
+  opacity: 1;
+  transition: 0.6s ease-in-out;
+  color: white;
+  text-align: center;
+}
+
+.grid-area a:hover .image-title {
+  opacity: 0;
+}
+
+.image-1 {
+  grid-area: image-1;
+}
+
+.image-1 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Cozinha/cake.jpg);
+}
+
+.image-2 {
+  grid-area: image-2;
+}
+
+.image-2 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Entrada/entrada1.webp);
+}
+
+.image-3 {
+  grid-area: image-3;
+}
+
+.image-3 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Área\ Comum/areaComum3.webp);
+}
+
+.image-4 {
+  grid-area: image-4;
+}
+
+.image-4 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Área\ Recreação/piano.webp);
+}
+
+.image-5 {
+  grid-area: image-5;
+}
+
+.image-5 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Área\ Recreação/quadra1.webp);
+}
+
+.image-6 {
+  grid-area: image-6;
+}
+
+.image-6 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Área\ Recreação/quadra2.webp);
+}
+
+.image-7 {
+  grid-area: image-7;
+}
+
+.image-7 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Sala\ de\ Jantar/salaJantar3.webp);
+}
+
+.image-8 {
+  grid-area: image-8;
+}
+
+.image-8 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Sala\ de\ Estar/salaEstar2.webp);
+}
+
+.image-9 {
+  grid-area: image-9;
+}
+
+.image-9 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Sala\ de\ Estar/salaEstar1.webp);
+}
+
+.image-10 {
+  grid-area: image-10;
+}
+
+.image-10 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Sala\ de\ Estar/salaEstar3.webp);
+}
+
+.image-11 {
+  grid-area: image-11;
+}
+
+.image-11 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Piscina/piscina2.webp);
+}
+
+.image-12 {
+  grid-area: image-12;
+}
+
+.image-12 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Sala\ de\ Jantar/salaJantar1.webp);
+}
+
+.image-13 {
+  grid-area: image-13;
+}
+
+.image-13 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Escritório/escritorio1.webp);
+}
+
+.image-14 {
+  grid-area: image-14;
+}
+
+.image-14 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Sala\ de\ Jantar/salaJantar2.webp);
+}
+
+.image-15 {
+  grid-area: image-15;
+}
+
+.image-15 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Cozinha/cozinha1.webp);
+}
+
+.image-16 {
+  grid-area: image-16;
+}
+
+.image-16 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Entrada/entrada2.webp);
+}
+
+.image-17 {
+  grid-area: image-17;
+}
+
+.image-17 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Piscina/piscina1.webp);
+}
+
+.image-18 {
+  grid-area: image-18;
+}
+
+.image-18 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Vista\ Superior/exterior1.webp);
+}
+
+.image-19 {
+  grid-area: image-19;
+}
+
+.image-19 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Vista\ Superior/exterior2.webp);
+}
+
+.image-20 {
+  grid-area: image-20;
+}
+
+.image-20 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Vista\ Superior/exterior3.webp);
+}
+
+.image-21 {
+  grid-area: image-21;
+}
+
+.image-21 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Vista\ Superior/exterior4.webp);
+}
+
+.image-22 {
+  grid-area: image-22;
+}
+
+.image-22 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Vista\ Superior/exterior5.webp);
+}
+
+.image-23 {
+  grid-area: image-23;
+}
+
+.image-23 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Vista\ Superior/exterior6.webp);
+}
+
+.image-24 {
+  grid-area: image-24;
+}
+
+.image-24 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Vista\ Superior/exterior7.webp);
+}
+
+.image-25 {
+  grid-area: image-25;
+}
+
+.image-25 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Área\ Recreação/adega.webp);
+}
+
+.image-26 {
+  grid-area: image-26;
+}
+
+.image-26 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Área\ Recreação/cinema.webp);
+}
+
+.image-27 {
+  grid-area: image-27;
+}
+
+.image-27 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Área\ Comum/areaComum1.webp);
+}
+
+.image-28 {
+  grid-area: image-28;
+}
+
+.image-28 .fundo {
+  background-image: url(../images/EmeraldCay/Interior/Área\ Comum/areaComum2.webp);
+}
+
+.image-29 {
+  grid-area: image-29;
+}
+
+.image-29 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Área\ Externa/areaExterna1.webp);
+}
+
+.image-30 {
+  grid-area: image-30;
+}
+
+.image-30 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Área\ Externa/areaExterna2.webp);
+}
+
+.image-31 {
+  grid-area: image-31;
+}
+
+.image-31 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Área\ Externa/areaExterna3.webp);
+}
+
+.image-32 {
+  grid-area: image-32;
+}
+
+.image-32 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Área\ Externa/areaExterna4.webp);
+}
+
+.image-33 {
+  grid-area: image-33;
+}
+
+.image-33 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Área\ Externa/areaExterna5.webp);
+}
+
+.image-34 {
+  grid-area: image-34;
+}
+
+.image-34 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Área\ Externa/areaExterna6.webp);
+}
+
+.image-35 {
+  grid-area: image-35;
+}
+
+.image-35 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Área\ Externa/areaExterna7.webp);
+}
+
+.image-36 {
+  grid-area: image-36;
+}
+
+.image-36 .fundo {
+  background-image: url(../images/EmeraldCay/Exterior/Área\ Externa/patio.webp);
+}

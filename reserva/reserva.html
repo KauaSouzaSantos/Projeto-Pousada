@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="reserva.css" />
+    <title>Reserva - Pousada Mar Azul</title>
+</head>
+
+<body>
+
+    <img src="../images/logo.png"
+        style="position: absolute; bottom: -150px; left: -200px; z-index: -999; transform: rotate(15deg); opacity: 0.6;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="logo" href="index.html">
+            <img src="../images/logo.png" alt="Logo Pousada Mar Azul" />
+            <h2 class="titulo">Pousada Mar Azul</h2>
+        </a>
+        <div class="collapse navbar-collapse nav-ul-container" id="navbarsExample05">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link nav-a" href="../home/home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-a" href="../galeria/galeria.html">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-a" href="../cidade/cidade.html">Conheça a cidade</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-a  actived" href="../reserva/reserva.html">Reservar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container reserv-container">
+        <div class="header">
+            <h2>Faça sua Reserva</h2>
+        </div>
+
+        <form id="form" class="form">
+            <div class="form-control icon-pos">
+                <label for="suite">Suíte</label>
+                <select type="text" id="suite">
+                    <option value="0">Selecione uma Suíte</option>
+                    <option value="1">Ocean Master</option>
+                    <option value="2">Ocean Basic</option>
+                    <option value="3">Shiny Lake</option>
+                    <option value="4">Soft Sea</option>
+                    <option value="5">Blue River</option>
+                </select>
+                <i style="right: 30px;" class="fas fa-exclamation-circle"></i>
+                <i style="right: 30px;" class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="qtdHospedes">Hospedes</label>
+                <input class="textInput travar" type="number" id="qtdHospedes" min="1" max="10"
+                    placeholder="Quantos hospedes?" />
+                <i style="right: 30px;" class="fas fa-exclamation-circle"></i>
+                <i style="right: 30px;" class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="check-in-out">
+                <div class="form-control">
+                    <label for="check-in">Check-in</label>
+                    <input class="textInput travar" type="date" id="check-in" style="padding: 10px 30px;" />
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Mensagem de erro</small>
+                </div>
+
+                <div class="form-control">
+                    <label for="check-out">Check-out</label>
+                    <input class="textInput travar" type="date" id="check-out" style="padding: 10px 30px;" />
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Mensagem de erro</small>
+                </div>
+            </div>
+
+            <div class="form-control"
+                style="display: flex; flex-wrap: wrap; column-gap: 10px; justify-content: center;">
+                <label style="width: 100%;">Refeição</label>
+                <div class="option-radio" id="option-radio">
+                    <input type="radio" name="rdRefeicao" id="rdRefeicao" value="1" />
+                    <p id="radioDesc">Café da Manhã</p>
+                </div>
+                <div class="option-radio">
+                    <input type="radio" name="rdRefeicao" id="rdRefeicao" value="2" />
+                    <p id="radioDesc">Meia Pensão</p>
+                </div>
+                <div class="option-radio">
+                    <input type="radio" name="rdRefeicao" id="rdRefeicao" value="3" />
+                    <p id="radioDesc">Pensão Completa</p>
+                </div>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control success"
+                style="display: flex; flex-wrap: wrap; column-gap: 20px; justify-content: center;">
+                <label style="width: 100%;">Serviços Adicionais</label>
+                <div class="option-checkbox">
+                    <input type="checkbox" name="cbTraslado" id="cbTraslado" class="cbSvAdicional">
+                    <p class="cbSvAdicionalTexto">Traslado</p>
+                </div>
+                <div class="option-checkbox">
+                    <input type="checkbox" name="cbTour" id="cbTour" class="cbSvAdicional">
+                    <p class="cbSvAdicionalTexto">City Tour</p>
+                </div>
+                <div class="option-checkbox">
+                    <input type="checkbox" name="cbPasseio" id="cbPasseio" class="cbSvAdicional">
+                    <p class="cbSvAdicionalTexto">Passeio</p>
+                </div>
+            </div>
+
+            <input class="button" type="button" value="Fazer Reserva" onclick="reservar()">
+        </form>
+    </div>
+
+    <div class="container resume-container">
+        <div class="header">
+            <h2>Resumo do Pedido</h2>
+        </div>
+
+        <div id="suite-image">
+        </div>
+        <div class="resume-div">
+            <p><strong>Suíte escolhida: </strong> <span id="txtSuite"></span> - R$ <span id="txtsuiteValor"></span></p>
+            <p><strong>Quantidade de Hospedes: </strong> <span id="txtHospedes"></span> - R$ <span
+                    id="hospedesValor"></span>
+            </p>
+            <p><strong>Dias Hospedado: </strong> <span id="txtEstadia"></span> - R$ <span id="estadiaValor"></span>
+            </p>
+            <p><strong>Refeição: </strong> <span id="txtRefeicao"></span> - R$ <span id="refeicaoValor"></span>
+            </p>
+            <p><strong>Serviços Adicionais: </strong> <span id="txtSvAdicional"></span></p>
+            <p><strong>Total </strong> - R$ <span id="txtTotal"></span></p>
+
+            <div class="buttons-div">
+                <input class="button" type="button" value="Cancelar" onclick="cancelar()">
+                <input class="button" type="button" value="Confirmar" onclick="confirmar()">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="confirm">
+        <i id="confirm-icon" class="fas fa-check-circle fa-rotate-180"></i>
+        <div id="confirm-text">
+            <h1>Sua viagem dos sonhos foi reservada com sucesso!</h1>
+            <p>Esperamos vê-lo em breve... 😎</p>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/f9e19193d6.js" crossorigin="anonymous"></script>
+
+    <script src="reserva.js"></script>
+</body>
+
+</html>

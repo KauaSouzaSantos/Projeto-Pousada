@@ -1,0 +1,185 @@
+body {
+  background: rgb(221, 221, 221);
+  background: linear-gradient(
+    145deg,
+    rgba(221, 221, 221, 1) 0%,
+    rgba(78, 232, 255, 1) 100%
+  );
+  font-family: "Poppins", sans-serif;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.col {
+  margin: 0;
+  padding: 0;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  transition: 1s;
+  width: 60px;
+}
+
+nav .titulo {
+  margin: 0;
+  margin-left: 5px;
+  border-bottom: 2px solid transparent;
+  transition: 0.6s;
+}
+
+nav .logo:hover img {
+  transform: rotate(20deg);
+}
+
+nav .logo:hover .titulo {
+  border-bottom: 2px solid #01cad4;
+  color: #01cad4;
+}
+
+.nav-ul-container {
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.nav-a {
+  width: 100%;
+  transition: 0.6s;
+  font-size: 1.2rem;
+  border-bottom: 2px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 22px;
+}
+
+.nav-a:hover {
+  border-bottom: 2px solid #0683dc;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.actived {
+  border-bottom: 2px solid #0683dc61;
+  color: white !important;
+}
+
+.slide-bg {
+  transition: 1s;
+}
+
+.slide-bg:hover {
+  filter: brightness(85%);
+}
+
+.carousel-item {
+  max-height: 350px;
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-desc {
+  transition: 1s;
+  color: white;
+}
+
+.acomodacoes {
+  transition: 2s;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acomodacoes h1 {
+  margin: 0;
+  z-index: 1;
+}
+
+.acomodacoes::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background-color: #007bffc0;
+  transition: 2s;
+  transition-delay: 0.5s;
+}
+
+.acomodacoes:hover::before {
+  width: 100%;
+}
+
+.acomodacoes:hover {
+  color: white;
+}
+
+.card-group {
+  margin-top: 20px;
+}
+
+.card-group .card {
+  transition-duration: 0.8s;
+  opacity: 0.8;
+  margin: 0 2px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.card-group .card:hover {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.card-group .card .card-body {
+  transition: 0.8s;
+}
+
+.card-group .card:hover .card-body {
+  background-color: #007bff;
+  color: white;
+}
+
+footer {
+  margin-top: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer nav {
+  padding: 10px 0;
+}
+
+footer nav a {
+  transition: 1s;
+  font-size: 15px;
+  color: white;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+@media screen and (max-width: 575px) {
+  footer {
+    position: absolute;
+    width: 100%;
+  }
+}
